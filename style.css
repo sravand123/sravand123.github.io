@@ -35,7 +35,7 @@ main {
 #title h1 {
     color:var(--text-color);
     font-size: 6vw;
-    letter-spacing: -10px;
+    letter-spacing: -5px;
 }
 .wb-body{
     background:#111;
@@ -47,6 +47,14 @@ main {
     height: 100px;
     border-radius: 50%;
     margin: 10px;
+}
+.view{
+    background-color: transparent;
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
 }
 #about {
     display: flex;
@@ -170,11 +178,19 @@ ul {
 .box{
     width: 50vw;
     border: 1px solid black;
-    overflow:auto;
+    overflow-y:auto;
     margin: auto;
     background-color: black;
     margin-top: 20px;
+    overflow-x: hidden;
     
+}
+iframe {
+    width: 50vw;
+    height: 50vh;
+    outline: none;
+    border: 1px solid black;
+
 }
 .box-title{
     background-color: var(--text-color);
@@ -189,6 +205,12 @@ ul {
     float: right;
     font-size: 20px;
     cursor: pointer;
+}
+.video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 @media screen and (max-width:700px) {
     #nav{
@@ -210,5 +232,10 @@ ul {
         width: 75px;
         height: 75px;
     }
+    iframe {
+        width: 90vw;
+        height: auto;
+    }
 }
+
 
